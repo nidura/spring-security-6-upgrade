@@ -1,0 +1,20 @@
+#server:
+#  port: 8080
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        opaquetoken:
+#          introspection-uri: https://localhost:8080/oauth2/introspect
+#          client-id: mobile_api_client
+#          client-secret: 6f6b8a16-e356-4850-bdde-423d36321940
+#      client:
+#        registration:
+#          oauth2-client:
+#            client-id: mobile_api_client
+#            client-secret: 6f6b8a16-e356-4850-bdde-423d36321940
+#            scope: read,write
+#            authorization-grant-type: password
+#        provider:
+#          oauth2-provider:
+#            token-uri: http://localhost:8080/oauth/token
