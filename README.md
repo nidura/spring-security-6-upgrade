@@ -54,10 +54,23 @@ Sample Curl request to test secure API
 
 Generate base 64 token for introspect - echo -n "mobile_api_client:6f6b8a16-e356-4850-bdde-423d36321940" | base64
       
-Testing introspect feature  
+Test Introspect  
 
     curl --location 'http://localhost:8080/oauth/introspect' \
     --header 'Authorization: Bearer 685b72d2-48ff-4ffe-a566-6251f75b4523' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --header 'Cookie: JSESSIONID=72A72E3DDBCBCC7680F27BA655678727' \
     --data-urlencode 'token=a9eaab1b-f444-43a9-8953-1ac71588b546'
+
+
+Introspect response 
+
+    {
+    "sub": "755783205",
+    "exp": 1742202579,
+    "scope": "read write",
+    "roles": [
+        "ROLE_MOBILE_APP_USER"
+    ],
+    "active": true
+  }
