@@ -25,7 +25,7 @@ public class CustomOAuth2AuthenticatedPrincipal implements OAuth2AuthenticatedPr
     @Override
     public String getName() {
         // Return the "sub" claim which should be the mobile number (or the user identifier)
-        Object subClaim = attributes.get("sub");
+        Object subClaim = attributes.get("username");
         if (subClaim != null) {
             return subClaim.toString();
         }

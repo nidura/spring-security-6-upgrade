@@ -40,7 +40,7 @@ public class WebSecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // Disable CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/oauth/token", "/login","/oauth/introspect","/health/check").permitAll() // Allow public access to auth endpoints
+                        .requestMatchers("/oauth/token", "/login","/token/introspect","/health/check").permitAll() // Allow public access to auth endpoints
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(oauth2ResourceServer ->

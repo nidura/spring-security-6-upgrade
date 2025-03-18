@@ -64,7 +64,7 @@ public class CustomOpaqueTokenIntrospector implements OpaqueTokenIntrospector {
                             body.put("exp", Instant.ofEpochSecond(exp.longValue())); // Convert to Instant
                         }
                         // Ensure that the "sub" claim (mobile number) is present in the attributes
-                        body.put("sub", body.get("sub"));
+                        body.put("username", body.get("username"));
 
                         // Create a custom principal
                         return new CustomOAuth2AuthenticatedPrincipal(body, token);

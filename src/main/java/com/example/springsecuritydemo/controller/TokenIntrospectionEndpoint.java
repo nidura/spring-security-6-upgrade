@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/oauth")
+@RequestMapping("/token")
 public class TokenIntrospectionEndpoint {
 
     @Autowired
@@ -32,9 +32,9 @@ public class TokenIntrospectionEndpoint {
         // Token is valid, return token details
         return new ResponseEntity<>(Map.of(
                 "active", true,
-                "sub", tokenDetails.getUsername(),
+                "username", tokenDetails.getUsername(),
                 "scope", "read write", // You can customize the scopes for the token here
-                "roles", tokenDetails.getRoles(),
+                "role", tokenDetails.getRoles(),
                 "exp", System.currentTimeMillis() / 1000 + 3600 // Expiry (mocked as 1 hour from now)
         ), HttpStatus.OK);
     }

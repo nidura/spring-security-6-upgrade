@@ -56,7 +56,7 @@ Generate base 64 token for introspect - echo -n "mobile_api_client:6f6b8a16-e356
       
 Test Introspect  
 
-    curl --location 'http://localhost:8080/oauth/introspect' \
+    curl --location 'http://localhost:8080/token/introspect' \
     --header 'Authorization: Bearer 685b72d2-48ff-4ffe-a566-6251f75b4523' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --header 'Cookie: JSESSIONID=72A72E3DDBCBCC7680F27BA655678727' \
