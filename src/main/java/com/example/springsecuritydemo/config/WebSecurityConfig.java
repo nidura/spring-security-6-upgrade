@@ -23,7 +23,7 @@ import java.util.Map;
 public class WebSecurityConfig {
 
     //todo config in property
-    private final String introspectionUri = "http://localhost:8080/oauth/introspect"; // Your introspection endpoint
+    private final String introspectionUri = "http://localhost:8080/token/introspect"; // Your introspection endpoint
 
 
     @Bean
